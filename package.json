@@ -6,7 +6,7 @@
     "preversion": "npm run lint && npm run build && npm t",
     "postversion": "git push && git push --tags",
     "build": "rm -rf dist && mkdir dist && tsc -p .",
-    "lint": "tslint -p . && tslint test/*",
+    "lint": "tslint -p .",
     "watch": "npm run build -- --watch",
     "test": "tslint --test test/**/tslint.json"
   },
