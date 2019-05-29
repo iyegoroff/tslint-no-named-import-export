@@ -1,6 +1,6 @@
 {
   "name": "tslint-no-named-export",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "TSLint rule that prohibits named exports",
   "scripts": {
     "preversion": "npm run lint && npm run build && npm t",
