@@ -14,16 +14,16 @@ Can be used to mimic "module interface" with default export.
 
 ## Usage
 
+Specify affected files with regex pattern or list of patterns:
+
 ```json
   // tslint.json
   "extends": [
     "tslint-no-named-export"
   ],
+  "rules": {
+    "no-named-export": [true, "^view\\.(native|web|ios|android)\\.tsx?$"],
+    ...
+  }
   ...
-```
-
-Since using default exports is widely considered a bad practice this rule should be enabled per file rather than in tslint.json
-
-```typescript
-// tslint:enable:no-named-export
 ```

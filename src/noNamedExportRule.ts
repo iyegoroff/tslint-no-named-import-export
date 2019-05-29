@@ -29,9 +29,8 @@ export class Rule extends Lint.Rules.AbstractRule {
       }
     },
     optionExamples: [
-      true,
-      [true, 'view', 'state-\\d{2}'],
-      [true, 'state', ['^view\\w+', '^app$']]
+      [true, '^view\\.(native|web|ios|android)\\.tsx$'],
+      [true, 'state', ['^view\\w+', '^app']]
     ],
     type: 'maintainability',
     typescriptOnly: false
