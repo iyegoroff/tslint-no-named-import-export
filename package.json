@@ -2,6 +2,7 @@
   "name": "tslint-no-named-export",
   "version": "0.0.1",
   "description": "TSLint rule that prohibits named exports",
+  "main": "index.json",
   "scripts": {
     "preversion": "npm run lint && npm run build && npm t",
     "postversion": "git push && git push --tags",
@@ -51,5 +52,8 @@
     "coverageDirectory": "coverage",
     "collectCoverage": true,
     "testEnvironment": "node"
+  },
+  "dependencies": {
+    "array-flatten": "^2.1.2"
   }
 }

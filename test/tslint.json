@@ -1,6 +1,6 @@
 {
   "rulesDirectory": "../dist",
   "rules": {
-    "no-named-export": true
+    "no-named-export": [true, "no-named-export.ts"]
   }
 }
