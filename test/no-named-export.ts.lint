@@ -1,0 +1,75 @@
+export default class x {}
+
+export foo from "foo.js"
+~~~~~~                   [Use of named exports is forbidden]
+export Memory, { MemoryValue } from './Memory'
+~~~~~~                                         [Use of named exports is forbidden]
+export default cont x = 1
+
+export default function bar() {}
+
+export default { view } as x
+
+let foo; export { foo as default }
+
+let foo; export { foo as default, a }
+         ~~~~~~                       [Use of named exports is forbidden]
+let foo; export { foo as bar }
+         ~~~~~~                [Use of named exports is forbidden]
+export default from "foo.js"
+
+import * as foo from './foo'
+
+import foo from './foo'
+
+import {default as foo} from './foo'
+
+
+
+
+export const foo = 'foo'
+~~~~~~                   [Use of named exports is forbidden]
+export const bar = 'bar'
+~~~~~~                   [Use of named exports is forbidden]
+
+export const foo = 'foo'
+~~~~~~                   [Use of named exports is forbidden]
+export default bar
+
+export const foo = 'foo'
+~~~~~~                   [Use of named exports is forbidden]
+export function bar() {}
+~~~~~~                   [Use of named exports is forbidden]
+export const foo = 'foo'
+~~~~~~                   [Use of named exports is forbidden]
+
+const foo = 'foo'
+export { foo }
+~~~~~~         [Use of named exports is forbidden]
+let foo, bar export { foo, bar }
+             ~~~~~~              [Use of named exports is forbidden]
+export const { foo, bar } = item
+~~~~~~                           [Use of named exports is forbidden]
+export const { foo, bar: baz } = item
+~~~~~~                                [Use of named exports is forbidden]
+export const { foo: { bar, baz } } = item
+~~~~~~                                    [Use of named exports is forbidden]
+let item
+export const foo = item
+~~~~~~                  [Use of named exports is forbidden]
+export { item }
+~~~~~~          [Use of named exports is forbidden]
+export * from './foo'
+~~~~~~                [Use of named exports is forbidden]
+export const { foo } = { foo: "bar" }
+~~~~~~                                [Use of named exports is forbidden]
+export const { foo: { bar } } = { foo: { bar: "baz" } }
+~~~~~~                                                  [Use of named exports is forbidden]
+export { a, b } from "foo.js"
+~~~~~~                        [Use of named exports is forbidden]
+export type UserId = number
+~~~~~~                      [Use of named exports is forbidden]
+export foo from "foo.js"
+~~~~~~                   [Use of named exports is forbidden]
+export Memory, { MemoryValue } from './Memory'
+~~~~~~                                         [Use of named exports is forbidden]
