@@ -22,10 +22,6 @@ export class Rule extends Lint.Rules.AbstractRule {
 }
 
 function walk(ctx: Lint.WalkContext): void {
-  if (ctx.sourceFile.isDeclarationFile || !ts.isExternalModule(ctx.sourceFile)) {
-    return
-  }
-
   const syntaxList = (ctx.sourceFile.getChildren() || [])
     .find(node => node.kind === ts.SyntaxKind.SyntaxList)
 
