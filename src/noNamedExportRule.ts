@@ -9,7 +9,7 @@ export class Rule extends Lint.Rules.AbstractRule {
     description: 'Disallows named exports in ES6-style modules.',
     descriptionDetails: 'Use default export instead.',
     rationale: 'Can be used to mimic `module interface` with default export.',
-    optionsDescription: 'A list of module names or regular expression patterns.',
+    optionsDescription: 'A list of file names or regular expression patterns.',
     options: {
       type: 'array',
       items: {
@@ -52,11 +52,15 @@ type Options = Array<string | string[]>
 function walk(ctx: Lint.WalkContext<Options>): void {
   const { sourceFile } = ctx
 
+  if (ctx.sourceFile.isDeclarationFile || !ts.isExternalModule(ctx.sourceFile)) {
+    return
+  }
+
   if (
     flatten<string>(ctx.options).some(p => new RegExp(p).test(basename(sourceFile.fileName)))
   ) {
     const syntaxList = (sourceFile.getChildren() || [])
-    .find(node => node.kind === ts.SyntaxKind.SyntaxList)
+      .find(node => node.kind === ts.SyntaxKind.SyntaxList)
 
     if (syntaxList !== undefined) {
       (syntaxList.getChildren() || []).forEach((node) => {

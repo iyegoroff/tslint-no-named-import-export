@@ -1,0 +1,24 @@
+export default class x {}
+
+import { x } from 'view'
+~~~~~~                   [Use of named imports is forbidden]
+import x from 'view'
+
+import x, {x} from 'view'
+~~~~~~                    [Use of named imports is forbidden]
+import { x }, x from 'view'
+~~~~~~                      [Use of named imports is forbidden]
+import * as x from 'view'
+~~~~~~                    [Use of named imports is forbidden]
+import 'view'
+
+import { x } from 'state'
+
+import x from 'state'
+
+import x, {x} from 'state'
+
+import { x }, x from 'state'
+
+import * as x from 'state'
+

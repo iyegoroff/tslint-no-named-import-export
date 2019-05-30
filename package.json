@@ -1,5 +1,5 @@
 {
-  "name": "tslint-no-named-export",
+  "name": "tslint-no-named-import-export",
   "version": "1.0.0",
   "description": "TSLint rule that prohibits named exports",
   "main": "index.json",
@@ -23,12 +23,12 @@
   "author": "iyegoroff <iegoroff@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iyegoroff/tslint-no-named-export/issues"
+    "url": "https://github.com/iyegoroff/tslint-no-named-import-export/issues"
   },
-  "homepage": "https://github.com/iyegoroff/tslint-no-named-export#readme",
+  "homepage": "https://github.com/iyegoroff/tslint-no-named-import-export#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iyegoroff/tslint-no-named-export.git"
+    "url": "git+https://github.com/iyegoroff/tslint-no-named-import-export.git"
   },
   "devDependencies": {
     "@types/node": "^12.0.3",
