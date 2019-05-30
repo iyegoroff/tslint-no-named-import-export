@@ -13,7 +13,8 @@
   },
   "keywords": [
     "tslint",
-    "no-named-export"
+    "no-named-export",
+    "no-named-import"
   ],
   "files": [
     "dist",
