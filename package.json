@@ -1,6 +1,6 @@
 {
   "name": "tslint-no-named-import-export",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "TSLint rule that prohibits named exports",
   "main": "index.json",
   "scripts": {
