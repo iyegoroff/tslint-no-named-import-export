@@ -41,19 +41,6 @@
     "tslint": "^5.x",
     "typescript": "^3.x"
   },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "ts"
-    ],
-    "testRegex": ".spec.ts$",
-    "transform": {
-      "^.+\\.ts$": "ts-jest"
-    },
-    "coverageDirectory": "coverage",
-    "collectCoverage": true,
-    "testEnvironment": "node"
-  },
   "dependencies": {
     "array-flatten": "^2.1.2"
   }
